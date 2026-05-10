@@ -104,10 +104,10 @@
     <!-- Ubuntu -->
     <string name="ubuntu_suite" translatable="false">resolute</string>
     <!-- arm -->
-    <string name="arm_ubuntu_source_path" translatable="false">http://ports.ubuntu.com/</string>
+    <string name="arm_ubuntu_source_path" translatable="false">http://ports.ubuntu.com/ubuntu-ports/</string>
     <string name="arm_ubuntu_arch" translatable="false">armhf</string>
     <!-- arm_64 -->
-    <string name="arm_64_ubuntu_source_path" translatable="false">http://ports.ubuntu.com/</string>
+    <string name="arm_64_ubuntu_source_path" translatable="false">http://ports.ubuntu.com/ubuntu-ports/</string>
     <string name="arm_64_ubuntu_arch" translatable="false">arm64</string>
     <!-- x86 -->
     <string name="x86_ubuntu_source_path" translatable="false">http://archive.ubuntu.com/ubuntu/</string>
