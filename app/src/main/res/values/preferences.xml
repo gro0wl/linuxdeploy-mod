@@ -67,13 +67,14 @@
     <string name="pulse_port" translatable="false">4712</string>
     <string name="is_gui" translatable="false">false</string>
     <string name="graphics" translatable="false">vnc</string>
-    <string name="desktop" translatable="false">lxde</string>
+    <string name="desktop" translatable="false">xfce</string>
     <string name="vnc_display" translatable="false">0</string>
     <string name="vnc_depth" translatable="false">16</string>
     <string name="vnc_dpi" translatable="false">75</string>
     <string name="vnc_width" translatable="false"></string>
     <string name="vnc_height" translatable="false"></string>
     <string name="vnc_args" translatable="false"></string>
+    <string name="xrdp_port" translatable="false">3389</string>
     <string name="x11_display" translatable="false">0</string>
     <string name="x11_host" translatable="false">127.0.0.1</string>
     <string name="x11_sdl" translatable="false">false</string>
@@ -86,7 +87,7 @@
     <string name="fb_freeze" translatable="false">none</string>
 
     <!-- Debian -->
-    <string name="debian_suite" translatable="false">buster</string>
+    <string name="debian_suite" translatable="false">trixie</string>
     <!-- arm -->
     <string name="arm_debian_source_path" translatable="false">http://ftp.debian.org/debian/</string>
     <string name="arm_debian_arch" translatable="false">armhf</string>
@@ -101,7 +102,7 @@
     <string name="x86_64_debian_arch" translatable="false">amd64</string>
 
     <!-- Ubuntu -->
-    <string name="ubuntu_suite" translatable="false">bionic</string>
+    <string name="ubuntu_suite" translatable="false">resolute</string>
     <!-- arm -->
     <string name="arm_ubuntu_source_path" translatable="false">http://ports.ubuntu.com/</string>
     <string name="arm_ubuntu_arch" translatable="false">armhf</string>
@@ -131,7 +132,7 @@
     <string name="x86_64_kali_arch" translatable="false">amd64</string>
 
     <!-- Fedora -->
-    <string name="fedora_suite" translatable="false">30</string>
+    <string name="fedora_suite" translatable="false">44</string>
     <!-- arm -->
     <string name="arm_fedora_source_path" translatable="false">http://dl.fedoraproject.org/pub/</string>
     <string name="arm_fedora_arch" translatable="false">armhfp</string>
@@ -146,7 +147,7 @@
     <string name="x86_64_fedora_arch" translatable="false">x86_64</string>
 
     <!-- CentOS -->
-    <string name="centos_suite" translatable="false">7</string>
+    <string name="centos_suite" translatable="false">10-stream</string>
     <!-- arm -->
     <string name="arm_centos_source_path" translatable="false">http://mirror.centos.org/altarch/</string>
     <string name="arm_centos_arch" translatable="false">armhfp</string>
@@ -176,7 +177,7 @@
     <string name="x86_64_archlinux_arch" translatable="false">x86_64</string>
 
     <!-- Slackware -->
-    <string name="slackware_suite" translatable="false">14.2</string>
+    <string name="slackware_suite" translatable="false">15.0</string>
     <!-- arm -->
     <string name="arm_slackware_source_path" translatable="false">http://ftp.arm.slackware.com/slackwarearm/</string>
     <string name="arm_slackware_arch" translatable="false">arm</string>
@@ -208,16 +209,16 @@
     <!-- Docker -->
     <string name="docker_suite" translatable="false">linux</string>
     <!-- arm -->
-    <string name="arm_docker_source_path" translatable="false">library/ubuntu:18.04</string>
+    <string name="arm_docker_source_path" translatable="false">library/ubuntu:26.04</string>
     <string name="arm_docker_arch" translatable="false">arm</string>
     <!-- arm_64 -->
-    <string name="arm_64_docker_source_path" translatable="false">library/ubuntu:18.04</string>
+    <string name="arm_64_docker_source_path" translatable="false">library/ubuntu:26.04</string>
     <string name="arm_64_docker_arch" translatable="false">arm64</string>
     <!-- x86 -->
-    <string name="x86_docker_source_path" translatable="false">library/ubuntu:18.04</string>
+    <string name="x86_docker_source_path" translatable="false">library/ubuntu:26.04</string>
     <string name="x86_docker_arch" translatable="false">386</string>
     <!-- x86_64 -->
-    <string name="x86_64_docker_source_path" translatable="false">library/ubuntu:18.04</string>
+    <string name="x86_64_docker_source_path" translatable="false">library/ubuntu:26.04</string>
     <string name="x86_64_docker_arch" translatable="false">amd64</string>
 
     <!-- RootFS -->

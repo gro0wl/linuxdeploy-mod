@@ -48,6 +48,9 @@ public class PropertiesFragment extends PreferenceFragmentCompat implements
                 case 7:
                     setPreferencesFromResource(R.xml.properties_pulse, rootKey);
                     break;
+                case 8:
+                    setPreferencesFromResource(R.xml.properties_xrdp, rootKey);
+                    break;
                 default:
                     setPreferencesFromResource(R.xml.properties, rootKey);
             }
@@ -84,6 +87,9 @@ public class PropertiesFragment extends PreferenceFragmentCompat implements
                 switch (graphics.getValue()) {
                     case "vnc":
                         intent.putExtra("pref", 2);
+                        break;
+                    case "xrdp":
+                        intent.putExtra("pref", 8);
                         break;
                     case "x11":
                         intent.putExtra("pref", 3);

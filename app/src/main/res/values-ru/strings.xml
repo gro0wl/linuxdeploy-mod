@@ -84,6 +84,7 @@
     <string name="dialog_title_locale_preference">Локализация</string>
     <string name="ssh_preferences">SSH</string>
     <string name="vnc_preferences">VNC</string>
+    <string name="xrdp_preferences">XRDP</string>
     <string name="fb_preferences">Framebuffer</string>
     <string name="help_text">\n<b>Справка</b>\n\nПриложение устанавливает выбранный GNU/Linux дистрибутив и запускает его в chroot-контейнере.\n\nПорядок действий:\n1. Получить права суперпользователя (root).\n2. Проверить подключение к интернету.\n3. Указать параметры установки.\n4. Запустить установку (\"Меню => Установить\").\n5. Дождаться окончания установки.\n6. Запустить контейнер кнопкой \"СТАРТ\".\n7. Подключиться к контейнеру через CLI, SSH, VNC или др.\n\nДополнительную информацию см. в разделе \"О программе\".</string>
     <string name="about_text">Приложение устанавливает выбранный GNU/Linux дистрибутив и запускает его в chroot-контейнере.\n\nЗа дополнительной информацией обращайтесь на <a href="https://github.com/meefik/linuxdeploy">страницу проекта</a>, <a href="http://4pda.ru/forum/index.php?showtopic=378043">форум</a> или <a href="https://meefik.github.io">сайт разработчика</a>.\n\n&#169; 2012&#8211;2019 Антон Скшидлевский, GPLv3</string>
@@ -103,6 +104,7 @@
     <string name="title_vnc_dpi_preference">DPI</string>
     <string name="title_vnc_height_preference">Высота экрана</string>
     <string name="title_vnc_width_preference">Ширина экрана</string>
+    <string name="title_xrdp_port_preference">Порт</string>
     <string name="title_user_name_preference">Имя пользователя</string>
     <string name="title_trace_mode_preference">Режим трассировки</string>
     <string name="title_user_password_preference">Пароль пользователя</string>
@@ -187,6 +189,7 @@
     <string name="dialog_title_vnc_dpi_preference">VNC: точек на дюйм (DPI)</string>
     <string name="dialog_title_vnc_height_preference">VNC: высота экрана</string>
     <string name="dialog_title_vnc_width_preference">VNC: ширина экрана</string>
+    <string name="dialog_title_xrdp_port_preference">XRDP: порт</string>
     <string name="dialog_title_telnet_port_preference">Порт TELNET</string>
     <string name="title_server_url_preference">URL сервера</string>
     <string name="menu_export">Экспортировать</string>

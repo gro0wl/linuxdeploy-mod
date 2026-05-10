@@ -219,6 +219,7 @@
         <item>lxde</item>
         <item>xfce</item>
         <item>mate</item>
+        <item>gnome</item>
         <item>other</item>
     </string-array>
     <string-array name="desktop_entries">
@@ -226,6 +227,7 @@
         <item>LXDE</item>
         <item>Xfce</item>
         <item>MATE</item>
+        <item>GNOME</item>
         <item>Other</item>
     </string-array>
     <string-array name="distrib_values" translatable="false">
@@ -258,11 +260,13 @@
     </string-array>
     <string-array name="graphics_values" translatable="false">
         <item>vnc</item>
+        <item>xrdp</item>
         <item>x11</item>
         <item>fb</item>
     </string-array>
     <string-array name="graphics_entries" translatable="false">
         <item>VNC</item>
+        <item>XRDP</item>
         <item>X11</item>
         <item>Framebuffer</item>
     </string-array>
@@ -281,12 +285,15 @@
     <!-- Debian -->
 
     <string-array name="debian_suite_values" translatable="false">
-        <item>oldstable</item>
         <item>stable</item>
+        <item>oldstable</item>
+        <item>oldoldstable</item>
         <item>testing</item>
         <item>unstable</item>
-        <item>jessie</item>
-        <item>stretch</item>
+        <item>trixie</item>
+        <item>forky</item>
+        <item>bookworm</item>
+        <item>bullseye</item>
         <item>buster</item>
     </string-array>
     <string-array name="debian_arch_values" translatable="false">
@@ -300,9 +307,11 @@
     <!-- Ubuntu -->
 
     <string-array name="ubuntu_suite_values" translatable="false">
-        <item>precise</item>
-        <item>trusty</item>
-        <item>xenial</item>
+        <item>resolute</item>
+        <item>questing</item>
+        <item>noble</item>
+        <item>jammy</item>
+        <item>focal</item>
         <item>bionic</item>
     </string-array>
     <string-array name="ubuntu_arch_values" translatable="false">
@@ -329,6 +338,11 @@
     <!-- Fedora -->
 
     <string-array name="fedora_suite_values" translatable="false">
+        <item>44</item>
+        <item>43</item>
+        <item>42</item>
+        <item>41</item>
+        <item>40</item>
         <item>30</item>
     </string-array>
     <string-array name="fedora_arch_values" translatable="false">
@@ -341,6 +355,8 @@
     <!-- CentOS -->
 
     <string-array name="centos_suite_values" translatable="false">
+        <item>10-stream</item>
+        <item>9-stream</item>
         <item>7</item>
     </string-array>
     <string-array name="centos_arch_values" translatable="false">
@@ -367,6 +383,8 @@
     <!-- Slackware -->
 
     <string-array name="slackware_suite_values" translatable="false">
+        <item>15.0</item>
+        <item>current</item>
         <item>14.2</item>
     </string-array>
     <string-array name="slackware_arch_values" translatable="false">
@@ -379,6 +397,10 @@
 
     <string-array name="alpine_suite_values" translatable="false">
         <item>latest-stable</item>
+        <item>v3.23</item>
+        <item>v3.22</item>
+        <item>v3.21</item>
+        <item>v3.20</item>
         <item>edge</item>
     </string-array>
     <string-array name="alpine_arch_values" translatable="false">

@@ -312,6 +312,12 @@
     <string name="title_vnc_args_preference">VNC options</string>
     <string name="dialog_title_vnc_args_preference">VNC: vncserver options</string>
 
+    <!-- XRDP -->
+    <string name="xrdp_preferences">XRDP</string>
+    <!-- XRDP_PORT -->
+    <string name="title_xrdp_port_preference">Port</string>
+    <string name="dialog_title_xrdp_port_preference">XRDP: port</string>
+
     <!-- X11 -->
     <string name="x11_preferences">X11</string>
     <!-- X11_DISPLAY -->
