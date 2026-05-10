@@ -12,6 +12,9 @@
     <string name="menu_install">Установить</string>
     <string name="menu_configure">Конфигурировать</string>
     <string name="menu_status">Состояние</string>
+    <string name="menu_diagnose">Диагностика</string>
+    <string name="menu_repair_desktop">Починить desktop</string>
+    <string name="menu_preset">Пресеты</string>
     <string name="menu_clear">Очистить</string>
     <string name="menu_add">Добавить</string>
     <string name="menu_edit">Изменить</string>
@@ -78,6 +81,9 @@
     <string name="title_configure_dialog">Конфигурировать</string>
     <string name="message_configure_dialog">Выполнить конфигурацию контейнера?</string>
     <string name="title_export_dialog">Экспортировать</string>
+    <string name="title_repair_desktop_dialog">Починить desktop</string>
+    <string name="message_repair_desktop_dialog">Пересоздать файлы запуска desktop, графики и SSH?</string>
+    <string name="title_preset_dialog">Применить пресет</string>
     <string name="title_suite_preference">Версия дистрибутива</string>
     <string name="dialog_title_suite_preference">Версия дистрибутива</string>
     <string name="title_locale_preference">Локализация</string>

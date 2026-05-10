@@ -34,6 +34,18 @@
         android:title="@string/menu_status"
         app:showAsAction="never" />
     <item
+        android:id="@+id/menu_diagnose"
+        android:title="@string/menu_diagnose"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_repair_desktop"
+        android:title="@string/menu_repair_desktop"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_preset"
+        android:title="@string/menu_preset"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_clear"
         android:title="@string/menu_clear"
         app:showAsAction="never" />

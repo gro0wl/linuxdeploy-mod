@@ -17,6 +17,9 @@
     <string name="menu_configure">Configure</string>
     <string name="menu_export">Export</string>
     <string name="menu_status">Status</string>
+    <string name="menu_diagnose">Diagnose</string>
+    <string name="menu_repair_desktop">Repair desktop</string>
+    <string name="menu_preset">Presets</string>
     <string name="menu_clear">Clear</string>
     <string name="menu_add">New</string>
     <string name="menu_edit">Edit</string>
@@ -162,6 +165,10 @@
     <string name="message_configure_dialog">Start configuration of the container?</string>
     <!-- EXPORT -->
     <string name="title_export_dialog">Export</string>
+    <!-- DIAGNOSTICS -->
+    <string name="title_repair_desktop_dialog">Repair desktop</string>
+    <string name="message_repair_desktop_dialog">Regenerate desktop, graphics and SSH startup files?</string>
+    <string name="title_preset_dialog">Apply preset</string>
 
     <!-- BOOTSTRAP -->
     <string name="bootstrap_preferences">BOOTSTRAP</string>

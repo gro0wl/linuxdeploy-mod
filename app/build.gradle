@@ -9,8 +9,8 @@ android {
         minSdkVersion 21
         // API 28 must be frozen for binary execution
         targetSdkVersion 28
-        versionCode 265
-        versionName "2.6.1-mod6"
+        versionCode 266
+        versionName "2.6.1-mod7"
         vectorDrawables.useSupportLibrary true
     }
     buildTypes {

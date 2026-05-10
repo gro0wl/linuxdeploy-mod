@@ -200,6 +200,15 @@ public class MainActivity extends AppCompatActivity implements
             case R.id.menu_status:
                 containerStatus();
                 break;
+            case R.id.menu_diagnose:
+                containerDiagnose();
+                break;
+            case R.id.menu_repair_desktop:
+                containerRepairDesktop();
+                break;
+            case R.id.menu_preset:
+                containerPreset();
+                break;
             case R.id.menu_clear:
                 clearLog();
                 break;
@@ -435,6 +444,50 @@ public class MainActivity extends AppCompatActivity implements
      */
     private void containerStatus() {
         EnvUtils.execService(getBaseContext(), "status", null);
+    }
+
+    /**
+     * Container diagnostics action
+     */
+    private void containerDiagnose() {
+        EnvUtils.execService(getBaseContext(), "diagnose", null);
+    }
+
+    /**
+     * Repair desktop action
+     */
+    private void containerRepairDesktop() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.title_repair_desktop_dialog)
+                .setMessage(R.string.message_repair_desktop_dialog)
+                .setCancelable(false)
+                .setPositiveButton(android.R.string.yes,
+                        (dialog, id) -> EnvUtils.execService(getBaseContext(), "repair-desktop", null))
+                .setNegativeButton(android.R.string.no,
+                        (dialog, id) -> dialog.cancel())
+                .show();
+    }
+
+    /**
+     * Apply preset action
+     */
+    private void containerPreset() {
+        final String[] titles = {
+                "Ubuntu Noble + GNOME + XRDP",
+                "Ubuntu Noble + XFCE + XRDP",
+                "Debian Trixie + XFCE + VNC",
+                "Alpine + SSH"
+        };
+        final String[] values = {
+                "ubuntu-noble-gnome-xrdp",
+                "ubuntu-noble-xfce-xrdp",
+                "debian-trixie-xfce-vnc",
+                "alpine-ssh"
+        };
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.title_preset_dialog)
+                .setItems(titles, (dialog, which) -> EnvUtils.execService(getBaseContext(), "preset", values[which]))
+                .show();
     }
 
     /**
