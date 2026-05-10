@@ -103,6 +103,13 @@
     <!-- Autostart delay -->
     <string name="title_autostart_delay_preference">Autostart delay</string>
     <string name="dialog_title_autostart_delay_preference">Delay (seconds)</string>
+    <!-- Persistent boot -->
+    <string name="title_persistent_boot_preference">Persistent boot</string>
+    <string name="summary_persistent_boot_preference">Keep retrying mount/start and watchdog-restart services after Android boot</string>
+    <string name="title_persistent_boot_retry_delay_preference">Retry delay</string>
+    <string name="dialog_title_persistent_boot_retry_delay_preference">Retry delay (seconds)</string>
+    <string name="title_persistent_boot_watchdog_preference">Watchdog interval</string>
+    <string name="dialog_title_persistent_boot_watchdog_preference">Watchdog interval (seconds, 0 disables)</string>
     <!-- Network trigger -->
     <string name="title_nettrack_preference">Track network changes</string>
     <string name="summary_nettrack_preference">Track changes of the network and update the container</string>

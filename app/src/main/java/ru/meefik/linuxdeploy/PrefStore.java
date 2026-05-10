@@ -358,6 +358,44 @@ public class PrefStore {
     }
 
     /**
+     * Persistent boot is enabled
+     *
+     * @param c context
+     * @return true if enabled
+     */
+    public static Boolean isPersistentBoot(Context c) {
+        return SETTINGS.get(c, "persistent_boot").equals("true");
+    }
+
+    /**
+     * Get persistent boot retry delay
+     *
+     * @param c context
+     * @return retry delay in seconds
+     */
+    public static Integer getPersistentBootRetryDelay(Context c) {
+        try {
+            return Integer.parseInt(SETTINGS.get(c, "persistent_boot_retry_delay"));
+        } catch (Exception e) {
+            return 30;
+        }
+    }
+
+    /**
+     * Get persistent boot watchdog interval
+     *
+     * @param c context
+     * @return watchdog interval in seconds
+     */
+    public static Integer getPersistentBootWatchdog(Context c) {
+        try {
+            return Integer.parseInt(SETTINGS.get(c, "persistent_boot_watchdog"));
+        } catch (Exception e) {
+            return 300;
+        }
+    }
+
+    /**
      * Track changes of the network status is enabled
      *
      * @param c context

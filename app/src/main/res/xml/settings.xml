@@ -81,6 +81,28 @@
             android:summary="@string/autostart_delay"
             android:title="@string/title_autostart_delay_preference" />
         <CheckBoxPreference
+            android:defaultValue="@string/persistent_boot"
+            android:dependency="autostart"
+            android:key="persistent_boot"
+            android:summary="@string/summary_persistent_boot_preference"
+            android:title="@string/title_persistent_boot_preference" />
+        <EditTextPreference
+            android:defaultValue="@string/persistent_boot_retry_delay"
+            android:dependency="persistent_boot"
+            android:dialogTitle="@string/dialog_title_persistent_boot_retry_delay_preference"
+            android:inputType="number"
+            android:key="persistent_boot_retry_delay"
+            android:summary="@string/persistent_boot_retry_delay"
+            android:title="@string/title_persistent_boot_retry_delay_preference" />
+        <EditTextPreference
+            android:defaultValue="@string/persistent_boot_watchdog"
+            android:dependency="persistent_boot"
+            android:dialogTitle="@string/dialog_title_persistent_boot_watchdog_preference"
+            android:inputType="number"
+            android:key="persistent_boot_watchdog"
+            android:summary="@string/persistent_boot_watchdog"
+            android:title="@string/title_persistent_boot_watchdog_preference" />
+        <CheckBoxPreference
             android:defaultValue="@string/nettrack"
             android:key="nettrack"
             android:summary="@string/summary_nettrack_preference"

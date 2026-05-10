@@ -257,6 +257,7 @@
     <string-array name="init_values" translatable="false">
         <item>run-parts</item>
         <item>sysv</item>
+        <item>systemd</item>
     </string-array>
     <string-array name="graphics_values" translatable="false">
         <item>vnc</item>

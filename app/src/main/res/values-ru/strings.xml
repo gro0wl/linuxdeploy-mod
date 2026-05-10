@@ -64,6 +64,12 @@
     <string name="summary_autostart_preference">Автоматически запускать контейнер при загрузке Android</string>
     <string name="title_autostart_delay_preference">Задержка автозапуска</string>
     <string name="dialog_title_autostart_delay_preference">Задержка (секунды)</string>
+    <string name="title_persistent_boot_preference">Вечная загрузка</string>
+    <string name="summary_persistent_boot_preference">Повторять монтирование/запуск и перезапускать сервисы watchdog после загрузки Android</string>
+    <string name="title_persistent_boot_retry_delay_preference">Задержка повтора</string>
+    <string name="dialog_title_persistent_boot_retry_delay_preference">Задержка повтора (секунды)</string>
+    <string name="title_persistent_boot_watchdog_preference">Интервал watchdog</string>
+    <string name="dialog_title_persistent_boot_watchdog_preference">Интервал watchdog (секунды, 0 отключает)</string>
     <string name="env_preferences">Рабочее окружение</string>
     <string name="title_installenv_preference">Обновить окружение</string>
     <string name="summary_installenv_preference">Обновить рабочее окружение программы</string>

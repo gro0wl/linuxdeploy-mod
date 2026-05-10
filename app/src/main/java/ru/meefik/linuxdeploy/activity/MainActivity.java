@@ -354,6 +354,11 @@ public class MainActivity extends AppCompatActivity implements
                                             FullscreenActivity.class);
                                     startActivity(intent);
                                 }, 1500);
+                            } else if (PrefStore.isPersistentBoot(getApplicationContext())) {
+                                String args = "--retry-delay=" + PrefStore.getPersistentBootRetryDelay(getApplicationContext()) +
+                                        " --watchdog=" + PrefStore.getPersistentBootWatchdog(getApplicationContext()) +
+                                        " --attempts=0";
+                                EnvUtils.execService(getBaseContext(), "persistent-start", args);
                             } else {
                                 EnvUtils.execService(getBaseContext(), "start", "-m");
                             }
@@ -374,7 +379,13 @@ public class MainActivity extends AppCompatActivity implements
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setCancelable(false)
                 .setPositiveButton(android.R.string.yes,
-                        (dialog, id) -> EnvUtils.execService(getBaseContext(), "stop", "-u"))
+                        (dialog, id) -> {
+                            if (PrefStore.isPersistentBoot(getApplicationContext())) {
+                                EnvUtils.execService(getBaseContext(), "persistent-stop", null);
+                            } else {
+                                EnvUtils.execService(getBaseContext(), "stop", "-u");
+                            }
+                        })
                 .setNegativeButton(android.R.string.no,
                         (dialog, id) -> dialog.cancel())
                 .show();

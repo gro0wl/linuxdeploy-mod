@@ -8,6 +8,7 @@ import android.content.Intent;
 import androidx.core.app.NotificationCompat;
 
 import ru.meefik.linuxdeploy.EnvUtils;
+import ru.meefik.linuxdeploy.PrefStore;
 import ru.meefik.linuxdeploy.R;
 import ru.meefik.linuxdeploy.activity.MainActivity;
 
@@ -56,13 +57,24 @@ public class ActionReceiver extends BroadcastReceiver {
         // am broadcast -a ru.meefik.linuxdeploy.BROADCAST_ACTION --user 0 --esn "start"
         if (intent.hasExtra("start")) {
             System.out.println("START");
-            EnvUtils.execService(context, "start", "-m");
+            if (PrefStore.isPersistentBoot(context)) {
+                String args = "--retry-delay=" + PrefStore.getPersistentBootRetryDelay(context) +
+                        " --watchdog=" + PrefStore.getPersistentBootWatchdog(context) +
+                        " --attempts=0";
+                EnvUtils.execService(context, "persistent-start", args);
+            } else {
+                EnvUtils.execService(context, "start", "-m");
+            }
             return;
         }
         // am broadcast -a ru.meefik.linuxdeploy.BROADCAST_ACTION --user 0 --esn "stop"
         if (intent.hasExtra("stop")) {
             System.out.println("STOP");
-            EnvUtils.execService(context, "stop", "-u");
+            if (PrefStore.isPersistentBoot(context)) {
+                EnvUtils.execService(context, "persistent-stop", null);
+            } else {
+                EnvUtils.execService(context, "stop", "-u");
+            }
             return;
         }
         // am broadcast -a ru.meefik.linuxdeploy.BROADCAST_ACTION --user 0 --esn "show"

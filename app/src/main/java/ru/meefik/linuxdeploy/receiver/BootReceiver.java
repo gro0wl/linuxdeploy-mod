@@ -22,10 +22,21 @@ public class BootReceiver extends BroadcastReceiver {
                     e.printStackTrace();
                 }
                 EnvUtils.execServices(context, new String[]{"telnetd", "httpd"}, "start");
-                EnvUtils.execService(context, "start", "-m");
+                if (PrefStore.isPersistentBoot(context)) {
+                    String args = "--retry-delay=" + PrefStore.getPersistentBootRetryDelay(context) +
+                            " --watchdog=" + PrefStore.getPersistentBootWatchdog(context) +
+                            " --attempts=0";
+                    EnvUtils.execService(context, "persistent-start", args);
+                } else {
+                    EnvUtils.execService(context, "start", "-m");
+                }
                 break;
             case Intent.ACTION_SHUTDOWN:
-                EnvUtils.execService(context, "stop", "-u");
+                if (PrefStore.isPersistentBoot(context)) {
+                    EnvUtils.execService(context, "persistent-stop", null);
+                } else {
+                    EnvUtils.execService(context, "stop", "-u");
+                }
                 EnvUtils.execServices(context, new String[]{"telnetd", "httpd"}, "stop");
                 try { // Shutdown delay
                     Integer delay_s = PrefStore.getAutostartDelay(context);
