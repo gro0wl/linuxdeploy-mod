@@ -1,0 +1,5 @@
+#!/system/bin/sh
+DIR="${0%/*}"
+export LD_LIBRARY_PATH="${DIR}:${LD_LIBRARY_PATH}"
+export MKE2FS_CONFIG="${DIR}/mke2fs.conf"
+exec "${DIR}/mke2fs.real" "$@"
