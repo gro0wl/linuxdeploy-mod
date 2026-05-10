@@ -368,6 +368,14 @@ public class EnvUtils {
      * @return true if success
      */
     public static boolean cli(Context c, String cmd, String args) {
+        if (!isLatestVersion(c)) {
+            Logger.log(c, "Updating Linux Deploy environment ...\n");
+            if (!updateEnv(c)) {
+                Logger.log(c, "Failed to update Linux Deploy environment.\n");
+                return false;
+            }
+        }
+
         List<String> params = new ArrayList<>();
         String opts = "";
         if (PrefStore.isDebugMode(c)) opts += "-d ";
